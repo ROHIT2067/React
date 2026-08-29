@@ -1,10 +1,15 @@
 import TodoList from './TodoList'
-import StopWatch from './StopWatch'
+import P from './p'
+
 function App(){
+  function handle(data){
+    console.log(data)
+  }
   return (
     <>
-    {/* <StopWatch/> */}
-    <TodoList/>
+    {/* <TodoList/> */}
+    <P isloggedIn={true}/>
+    <P isloggedIn={true}/>
     </>
   )
 }

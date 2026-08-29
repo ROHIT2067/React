@@ -9,13 +9,13 @@ function ToDoList() {
 
   function handleInputChange(e) {
     setNewTask(e.target.value);
-    if (err) setErr(""); // clear stale error once user starts typing again
+    if (err) setErr(""); 
   }
 
   function addTask() {
     if (newTask.trim() !== '') {
       for (let n of task) {
-        if (newTask === n.text) {
+        if (newTask.toUpperCase() === n.text.toUpperCase()) {
           setErr("Duplicate");
           return;
         }
@@ -60,7 +60,7 @@ function ToDoList() {
   function saveEdit(index) {
     if (editText.trim() === '') return;
     for (let i = 0; i < task.length; i++) {
-      if (i !== index && task[i].text === editText) {
+      if (i !== index && editText.toUpperCase() === task[i].text.toUpperCase()) {
         setErr("Duplicate");
         return;
       }
@@ -71,7 +71,7 @@ function ToDoList() {
     setEditIndex(null);
     setEditText("");
   }
-
+  
   return (
     <>
       <div className="to-do-list">
