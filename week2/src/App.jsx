@@ -7,12 +7,9 @@ const HeavyComponent=lazy(()=>import('./practice/heavy'))
 import Memo from "./practice/useMemoExample";
 import { LayOut, Home, About } from "./practice/outlet";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Mem from "./practice/p";
 
 
-function Hello(){
-    console.log("HELLO")
-}
+
 function App(){
   return (<> 
   {/* <CounterProvider>
@@ -26,7 +23,6 @@ function App(){
             <HeavyComponent/>
         </Suspense> */}
         {/* <Memo/> */}
-        <Mem/>
 
 
               {/* Outlet example */}
